@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
 }
+@media (min-width: 1440px) {
 .container{
     width: 100%;
     max-width: 1440px;
@@ -42,12 +43,20 @@ nav > div {
     margin: auto 10px;
     font-weight: 900;
 }
+.menu:hover{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
 #Faleconosco{
     background-color: white;
     color: rgb(0, 119, 255) ;
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: bold;
+    font-family: 'Manrope';
+    font-size: 16px;
+    text-decoration: none;
+    margin: auto 10px;
+    font-weight: 900;
 }
 #Faleconosco:hover{
     color: white;
@@ -150,6 +159,7 @@ nav > div {
 .fa-solid{
     font-size: 26px;
 }
+
 .header-secao{
     margin: auto;
     text-align: center;
@@ -159,33 +169,55 @@ nav > div {
 }
 .titulo-de-secao{
     font-family: "Manrope";
-    font-size: 55px;
+    font-size: 50px;
+    font-weight: 1000;
 }
 .descricao-de-secao{
     font-family: "Manrope";
-    font-size: 28px;
+    font-size: 22px;
 }
 .informacao-do-conteudo{
     font-family: "Manrope";
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
     text-align: justify;
 }
-#conteudos-secao-sobrenos{
+#container-sobrenos{
     display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 60px;
+    padding-top: 20px;
+}
+.conteudos-secao-sobrenos{
+    display: flex;
+    flex: 1;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     overflow: hidden;
 }
-#conteudo-esquerdo-sobrenos{
+#imagem-pastor-humberto{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+#conteudo-direito-pastor-humberto{
     flex: 0 0 50%;
     display: flex;
     margin-top: 25px;
     flex-direction: column;
     gap: 40px;
 }
-#conteudo-direito-sobrenos{
+.conteudo-esquerdo-sobrenos{
+    flex: 0 0 50%;
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.conteudo-direito-sobrenos{
     flex: 1;
     overflow: hidden;
     position: relative;
@@ -242,7 +274,7 @@ nav > div {
 }
 
 /* Pausa quando o usuário passa o mouse */
-#conteudo-direito-sobrenos:hover #container-das-imagens {
+.conteudo-direito-sobrenos:hover #container-das-imagens {
     animation-play-state: paused;
 }
 
@@ -259,13 +291,6 @@ nav > div {
 
     #bloco-das-imagens img {
         height: 220px;
-    }
-}
-
-/* Respeita usuários que preferem menos movimento */
-@media (prefers-reduced-motion: reduce) {
-    #container-das-imagens {
-        animation: none;
     }
 }
 
@@ -431,9 +456,6 @@ nav > div {
     min-width: 0;
     overflow: hidden;
 
-    border-radius: 20px;
-
-    background: #1e1834;
     border: 1px solid rgba(255,255,255,0.06);
 }
 @media (max-width: 1024px) {
@@ -476,4 +498,133 @@ nav > div {
     letter-spacing: -4%;
 }
 
+#secao-doacoes{
+    background-color: #110C29;
+}
+#header-secao-doacoes{
+    color: white;
 
+}
+#Bloco-doacoes{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.conteudos-doacoes{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 20px;
+}
+.card-doacoes{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff0c;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+
+    flex: 0 0 calc((100% - (2 * var(--card-gap))) / 3);
+
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.informacoes-card{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+.titulo-doacao{
+    color: white;
+    font-family: "Manrope";
+    font-size: 26px;
+    font-weight: bolder;
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+.descricao-programacao{
+    color: white;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+.imagem-doacoes{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+}
+.bloco-qrcode{
+    text-align: center;
+    font-family: "Manrope";
+    font-size: 15px;
+}
+#secao-redes-sociais{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+#header-secao-redes-sociais{
+    color: white;
+}
+#redes-sociais{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    padding: 20px 0;
+}
+#redes-sociais i{
+    color: white;
+    font-size: 40px;
+}
+#redes-sociais i:hover{
+    color: rgb(0, 149, 255);
+}
+}
+@media (max-width: 600px) {
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.239);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+nav{
+    margin: auto;
+    display: flex;
+    gap: 50px;
+}
+nav > div {
+    margin: auto ;
+}
+#logo{
+    width: 60px;
+    height: 60px;
+}
+}
