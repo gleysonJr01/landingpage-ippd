@@ -1,0 +1,584 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url(../fonts/Manrope/Manrope-VariableFont_wght.ttf) format(truetype);
+    font-weight: normal
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#hero-conteudos{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    min-height: 10svh;
+
+    background-image: url("../assets/backgrounds/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+}
+nav{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px 20px;
+    margin: auto;
+    background-color: #ffffff56;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+#logo{
+    width: 100%;
+    max-width: 40px;
+    height: auto;
+}
+#menu-toggle {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+}
+#menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    background-color: #372222;
+    width: 200px;
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+}
+
+/* Menu aberto */
+#menu.active {
+    display: flex;
+}
+#hero-informacoes{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    
+}
+#hero-informacoes-topo{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-family: "Manrope";
+    line-height: 116%;
+    letter-spacing: -4%;
+    gap: 8px;
+}
+#hero-titulo{
+    line-height:116%;
+    font-size: 45px;
+}
+.hero-subtitulo{
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    font-family: "Manrope";
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+#hero-informacoes-imagem{
+    position: relative;
+    width: 100%;
+}
+#hero-imagem-secao {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+#imagem-pastores{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    min-width: unset;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        #000 50%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        #000 50%,
+        transparent 100%
+    );
+}
+#hero-informacoes-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background-color: blue;
+    -webkit-mask-image: linear-gradient(
+        to top,
+        #000 50%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to top,
+        #000 50%,
+        transparent 100%
+    );
+    margin-top: clamp(-220px, -45vw, -200px);
+    position: relative;
+    z-index: 2;
+    height: auto;
+    padding: 80px 20px 50px;
+    gap: 15px;
+}
+#hero-botao{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.306);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height:25px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+#hero-botao a{
+    text-decoration: none;
+    color: white;
+    font-family: "Manrope";
+    font-weight: 900;
+}
+#secao-sobrenos{
+    background-color: #4A2208;
+}
+.header-mobile{
+    width: 100%;
+    height: auto;
+    max-height: 130px;
+}
+#conteudos-sobrenos{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#homenagem-pastor{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+}
+#span-destaque-sobrenos{
+    display: flex;
+    flex: 1;
+    background-color: #F1BF80;
+    color: black;
+    width: 100%;
+    max-width: 182px;
+    border-radius: 20px;
+    padding:5px;
+    font-size: 10px;
+    font-family: "Manrope";
+    font-weight: 700;
+}
+.titulo-secao{
+    font-family: "Manrope";
+    color: white;
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+.descricao-secao{
+    font-family: "Manrope";
+    color: white;
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+#sobre-a-igreja{
+    padding-top: 10px;
+}
+#carrossel{
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    padding: 20px 0;
+    height: auto;
+    margin: auto;
+    /* Fade nas extremidades */
+    -webkit-mask-image: linear-gradient(
+        to left,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+
+    mask-image: linear-gradient(
+        to left,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+#container-das-imagens {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    animation: scroll-gallery 30s linear infinite;
+}
+#bloco-das-imagens{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    padding-right: 18px;
+}
+#bloco-das-imagens img {
+    width: 270px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+@keyframes scroll-gallery {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+#secao-programacao{
+    background-color: #110C29;
+}
+.container-componentes{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.header-secao{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: white;
+    font-family: "Manrope";
+    text-align: center;
+    padding-top: 10px;
+}
+.label{
+    color: white;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-weight: bold;
+}
+.carrossel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+#container-botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 10px;
+    box-sizing: border-box;
+
+    -webkit-overflow-scrolling: touch;
+}
+.botoes-de-opcoes{
+    background-color: #ffffff0c;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 14px 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 125px;
+}
+.botoes-de-opcoes.active{
+    background: rgb(255, 255, 255);
+    color: #110C29;
+}
+.carousel-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.carousel-btn-prev,
+.carousel-btn-next,
+.carousel-endereco-btn-prev,
+.carousel-endereco-btn-next{
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.carousel-btn-next:disabled,
+.carousel-btn-prev:disabled,
+.carousel-endereco-btn-next:disabled,
+.carousel-endereco-btn-prev:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+    color: black;
+}
+.carrossel{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    --card-gap: 15px;
+}
+.carrossel::before,
+.carrossel::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 70px;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+.container-grupos-de-itens-de-programacoes{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: var(--card-gap);
+
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+    will-change: transform;
+}
+.container-grupos-de-itens-de-programacoes::after {
+    content: "";
+    flex: 0 0 0;
+}
+.item-de-programacao{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff0c;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 345px;
+    gap: 10px;
+
+    flex: 0 0 calc((100% - (2 * var(--card-gap))) / 1);
+
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.imagem-programacoes{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+.bloco-de-textos-de-programacoes{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+.titulo-programacao{
+    color: white;
+    font-family: "Manrope";
+    font-size: 22px;
+    font-weight: bolder;
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+.descricao-programacao{
+    color: white;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+#secao-doacoes{
+    background-color: #110C29;
+}
+#Bloco-doacoes{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.conteudos-doacoes{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    margin: auto;
+}
+.card-doacoes{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff0c;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 345px;
+
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.informacoes-card{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 5px;
+}
+.titulo-doacao{
+    color: white;
+    font-family: "Manrope";
+    font-size: 22px;
+    font-weight: bolder;
+    line-height: 116%;
+    letter-spacing: -4%;
+}
+.descricao-doacao{
+    color: white;
+    font-family: "Manrope";
+    font-size: 12px;
+    font-weight: bolder;
+    line-height: 116%;
+    letter-spacing: -4%;
+    width: 100%;
+}
+.imagem-doacoes{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+.bloco-qrcode{
+    text-align: center;
+    font-family: "Manrope";
+    font-size: 15px;
+    margin: auto;
+}
+.imagem-qrcode{
+    width: 100%;
+    height: auto;
+}
+.chavepix{
+    font-family: "Manrope";
+    font-size: 10px;
+}
+#secao-redes-sociais{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+#header-secao-redes-sociais{
+    color: white;
+}
+#redes-sociais{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    padding: 20px 0;
+}
+#redes-sociais i{
+    color: white;
+    font-size: 40px;
+}
+#redes-sociais i:hover{
+    color: rgb(0, 149, 255);
+}
