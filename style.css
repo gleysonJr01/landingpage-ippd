@@ -667,9 +667,8 @@ nav > div {
     color: white;
     padding: 10px;
     width: 100%;
+    max-width: 425px;
     gap: 10px;
-
-    flex: 0 0 calc((100% - (2 * var(--card-gap))) / 3);
 
     min-width: 0;
     overflow: hidden;
@@ -698,11 +697,41 @@ nav > div {
     line-height: 116%;
     letter-spacing: -4%;
     width: 100%;
+    padding-bottom: 10px;
 }
 .imagem-doacoes{
     width: 100%;
     height: 250px;
     border-radius: 20px;
+}
+.imagem-qrcode{
+    width: 100%;
+    max-width: 200px;
+}
+#card-arrecadacao{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.bloco-botoes{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.botao-doacao{
+    background-color: white;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: "Manrope";
+}
+.botao-receber-doacao{
+    background-color: rgb(2, 47, 173);
+    color: white;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: "Manrope";
 }
 .bloco-qrcode{
     text-align: center;
